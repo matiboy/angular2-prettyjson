@@ -8,3 +8,5 @@ Thumbs.db
 *.ts
 !*.d.ts
 spec
+.npmignore
+.idea
