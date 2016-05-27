@@ -34,7 +34,11 @@ import {SafeJsonPipe} from 'angular2-prettyjson/prettyjson';
 
 outputs
 
+2 spaces (default):
+
 ![2 spaces](https://cloud.githubusercontent.com/assets/487758/15599442/d163cf2a-2415-11e6-8097-f1f9f62fd3ce.png)
+
+4 spaces:
 
 ![4 spaces](https://cloud.githubusercontent.com/assets/487758/15599411/a6815a8e-2415-11e6-8f1f-e68db77885a2.png)
 
