@@ -1,6 +1,6 @@
 # Angular 2 Pretty Json
 
-A module for Angular 2 debug output of objects. Contains a pipe similar to [JsonPipe](https://angular.io/docs/ts/latest/api/common/index/JsonPipe-class.html) but adds support for spacing and handling of circular dependencies.
+A module for Angular 2 debug output of objects. Contains a pipe similar to [JsonPipe](https://angular.io/docs/ts/latest/api/common/index/JsonPipe-class.html) but adds support for spacing and handling of circular structures.
 Also contains a component that outputs any object with syntax highlight.
 Warning: just as the `JsonPipe`, this is an impure pipe and should used only for debugging purposes.
 
@@ -27,7 +27,7 @@ import {SafeJsonPipe} from 'angular2-prettyjson/prettyjson';
     {{ circularObj | json }}
     {{ circularObj | json:4 }}
     </pre>
-  ` // make sure to use a surrounding elements with white-space: pre; for best results
+  ` // make sure to use a surrounding element with white-space: pre; for best results
   })
   ...
 ```

@@ -5,7 +5,7 @@ import {serializer} from "./safe.util";
   name: "json"
 })
 export class SafeJsonPipe implements PipeTransform {
-  transform(obj: any, spaces = 2): string {
+  transform(obj: any, spaces: number= 2): string {
     return JSON.stringify(obj, serializer(), spaces);
   }
 }
