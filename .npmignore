@@ -7,3 +7,4 @@ Thumbs.db
 # Ignored files
 *.ts
 !*.d.ts
+spec

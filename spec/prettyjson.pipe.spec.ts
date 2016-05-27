@@ -58,14 +58,12 @@ describe("Generated markup", () => {
     let outcome = pipe.transform(o);
     // Parse html
     htmltree(outcome, (err: any, htmlDoc: any) => {
-      console.log(err, htmlDoc);
       let spans = htmlDoc.root.filter((element: any) => element.type === "tag");
       [0, 2, 4, 6, 9, 10, 11].forEach((index: number) => expect(spans[index].attributes.class).to.equal("key"));
-      console.log('ALL GOOD');
       [1, 3, 7].forEach((index: number) => expect(spans[index].attributes.class).to.equal("number"));
       [5, 8].forEach((index: number) => expect(spans[index].attributes.class).to.equal("string"));
       expect(spans[12].attributes.class).to.equal("null");
       done();
     });
   });
-})
+});
