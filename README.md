@@ -14,14 +14,14 @@ npm install angular2-prettyjson
 
 ### Safe Pipe
 
-The `SafeJsonPipe` aims to override the `JsonPipe` and so uses the same name "json". It also accepts an arguments spaces=2 for the JSON stringify spacing.
+The `SafeJsonPipe` aims to override the `JsonPipe` and so uses the same name "json". It also accepts an optional argument `spaces=2` for the JSON stringify spacing.
 
 ```js
 import {SafeJsonPipe} from 'angular2-prettyjson/prettyjson';
 
 @Component({
   ....
-  pipes [SafeJsonPipe],
+  pipes: [SafeJsonPipe],
   template: `
     <pre>
     {{ circularObj | json }}
@@ -33,6 +33,10 @@ import {SafeJsonPipe} from 'angular2-prettyjson/prettyjson';
 ```
 
 outputs
+
+![2 spaces](https://cloud.githubusercontent.com/assets/487758/15599442/d163cf2a-2415-11e6-8097-f1f9f62fd3ce.png)
+
+![4 spaces](https://cloud.githubusercontent.com/assets/487758/15599411/a6815a8e-2415-11e6-8f1f-e68db77885a2.png)
 
 #### Overriding JsonPipe throughout the app
 
@@ -60,7 +64,7 @@ import {PrettyJsonPipe} from 'angular2-prettyjson/prettyjson';
   ....
   pipes [PrettyJsonPipe],
   template: `
-    <pre [innerHtml>="circularObj | prettyjson:3"></pre>
+    <pre [innerHtml]="circularObj | prettyjson:3"></pre>
   `
   })
   ...
@@ -78,7 +82,7 @@ import {PrettyJsonPipe} from 'angular2-prettyjson/prettyjson';
 
  See output under component below.
 
- ## Component
+### Component
 
  Creates a `pre` element into which the Pretty Json pipe'd object is dumped as HTML. Takes care of styling.
 
@@ -90,7 +94,7 @@ import {PrettyJsonComponent} from 'angular2-prettyjson/prettyjson';
 @Component({
   ....
   template: `
-    <prettyjson [obj]="theForm"></prettyjson>
+    <prettyjson [obj]="theForm.value"></prettyjson>
   `
   })
   export class MyComponent {
@@ -100,3 +104,5 @@ import {PrettyJsonComponent} from 'angular2-prettyjson/prettyjson';
 ```
 
 outputs
+
+![Pretty json with syntax highlight](https://cloud.githubusercontent.com/assets/487758/15599410/a68103f4-2415-11e6-8c5e-d86c22abd72b.png)

@@ -10,8 +10,6 @@
   },
   "files": [
     "index.ts",
-    "spec/json.pipe.spec.ts",
-    "spec/prettyjson.pipe.spec.ts",
     "src/json.pipe.ts",
     "src/prettyjson.component.ts",
     "src/prettyjson.pipe.ts",
