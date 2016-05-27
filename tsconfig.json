@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "ES6",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "declaration": true
+  },
+  "files": [
+    "prettyjson.ts"
+  ],
+  "exclude": [
+      "node_modules"
+  ]
+}
