@@ -2,16 +2,23 @@
   "compilerOptions": {
     "noImplicitAny": true,
     "module": "commonjs",
-    "target": "ES6",
+    "target": "ES5",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
     "declaration": true
   },
   "files": [
-    "prettyjson.ts"
+    "index.ts",
+    "src/json.pipe.ts",
+    "src/prettyjson.component.ts",
+    "src/prettyjson.pipe.ts",
+    "src/safe.util.ts"
   ],
   "exclude": [
-      "node_modules"
-  ]
+    "node_modules"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
 }

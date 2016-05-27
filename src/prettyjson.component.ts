@@ -5,7 +5,7 @@ import {PrettyJsonPipe} from "./prettyjson.pipe";
   pipes: [PrettyJsonPipe],
   selector: "prettyjson",
   template: `
-    <pre [innerHtml]="obj | json">
+    <pre [innerHtml]="obj | prettyjson">
     </pre>
   `,
   styles: [
