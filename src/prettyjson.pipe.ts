@@ -2,7 +2,8 @@ import {Pipe, PipeTransform} from "@angular/core";
 import {serializer} from "./safe.util";
 
 @Pipe({
-  name: "prettyjson"
+  name: "prettyjson",
+  pure: false
 })
 export class PrettyJsonPipe implements PipeTransform {
   transform(obj: any, spaces = 2): string {
