@@ -1,8 +1,8 @@
-# Angular 2 Pretty Json v1.0.4
+# Angular 2 Pretty Json v1.0.5
 
-A module for Angular 2 debug output of objects. Contains a pipe similar to [JsonPipe](https://angular.io/docs/ts/latest/api/common/index/JsonPipe-class.html) but adds support for spacing and handling of circular structures.
-Also contains a component that outputs any object with syntax highlight.
-Warning: just as the `JsonPipe`, this is an impure pipe and should used only for debugging purposes.
+A module for Angular 2 debug output of objects. Contains a pipe similar to [JsonPipe](https://angular.io/docs/ts/latest/api/common/index/JsonPipe-class.html) but adds support for spacing and handling of circular structures.  
+Also contains a component that outputs any object with syntax highlight.  
+**Warning**: just as the `JsonPipe`, this is an impure pipe and should used only for debugging purposes.
 
 ## Install
 
@@ -110,3 +110,28 @@ import {PrettyJsonComponent} from 'angular2-prettyjson/prettyjson';
 outputs
 
 ![Pretty json with syntax highlight](https://cloud.githubusercontent.com/assets/487758/15599410/a68103f4-2415-11e6-8c5e-d86c22abd72b.png)
+
+## Integrate with [Angular-CLI](https://github.com/angular/angular-cli)
+
+1. Install
+1. Add `'angular2-prettyjson/**/*.+(js|js.map)'` to the `vendorNpmFiles` array in `angular-cli-build.js`
+1. In `src/system-config.js`:
+    - Add `'angular2-prettyjson'` to the "third party barrels"
+    - Add `'angular2-prettyjson': 'vendor/angular2-prettyjson'` to the System config: 
+    - ```
+        System.config({
+            map: {
+                '@angular': 'vendor/@angular',
+                'rxjs': 'vendor/rxjs',
+                'angular2-prettyjson': 'vendor/angular2-prettyjson',
+                'main': 'main.js'
+            },
+            packages: cliSystemConfigPackages
+        });
+      ```
+
+## Changelog
+
+1. Changed dependencies to anything _above_ Angular RC1
+1. Fixed styling of PrettyJsonComponent
+1. Added how-to integrate with Angular-CLI
