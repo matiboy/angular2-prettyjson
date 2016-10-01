@@ -11,10 +11,10 @@ export class PrettyJsonPipe implements PipeTransform {
   }
 
   private _syntaxHighlight(json: any, serializer: any, spacing: number): string {
-    // Credits to the accepted answer here http://stackoverflow.com/questions/4810841/how-can-i-pretty-print-json-using-javascript
-    if (!json) {
-        return "";
+    if (json === undefined) {
+        return '<span class="undefined"></span>';
     }
+    // Credits to the accepted answer here http://stackoverflow.com/questions/4810841/how-can-i-pretty-print-json-using-javascript
     if (typeof json !== "string") {
       json = JSON.stringify(json, serializer, spacing);
     }
