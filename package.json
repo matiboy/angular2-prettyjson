@@ -21,8 +21,8 @@
   "author": "Matiboy <mathieu@redapesolutions.com>",
   "license": "ISC",
   "dependencies": {
-    "@angular/common": "^2.0.0-rc.1",
-    "@angular/core": "^2.0.0-rc.1",
+    "@angular/common": "^2.0.0",
+    "@angular/core": "^2.0.0",
     "rxjs": "^5.0.0-beta.6",
     "zone.js": "^0.6.6"
   },
