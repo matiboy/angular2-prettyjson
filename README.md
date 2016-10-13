@@ -12,16 +12,32 @@ npm install angular2-prettyjson
 
 ## Usage
 
+Import PrettyJsonModule to have access to following component and pipes
+```js
+import {PrettyJsonModule} from 'angular2-prettyjson';
+
+@NgModule({
+    declarations: [
+        AppComponent,
+    ],
+    imports: [
+        PrettyJsonModule,
+    ],
+    providers: [
+    ],
+    bootstrap: [AppComponent]
+})
+export class AppModule {
+}
+```
+
 ### Safe Pipe
 
 The `SafeJsonPipe` aims to override the `JsonPipe` and so uses the same name "json". It also accepts an optional argument `spaces=2` for the JSON stringify spacing.
 
 ```js
-import {SafeJsonPipe} from 'angular2-prettyjson/prettyjson';
-
 @Component({
   ....
-  pipes: [SafeJsonPipe],
   template: `
     <pre>
     {{ circularObj | json }}
@@ -44,17 +60,27 @@ outputs
 
 #### Overriding JsonPipe throughout the app
 
-If you want the Safe Pipe to be used throughout the app, use a multi provider in bootstrap:
+If you want the Safe Pipe to be used throughout the app:
 
 ```js
+import {PrettyJsonModule} from 'angular2-prettyjson';
 import {SafeJsonPipe} from 'angular2-prettyjson/prettyjson';
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {provide, PLATFORM_PIPES} from '@angular/core';
+import {JsonPipe} from '@angular/common';
 
-bootstrap(ItunesAppComponent, [provide(PLATFORM_PIPES, {
-  useValue: [SafeJsonPipe],
-  multi: true
-})])
+@NgModule({
+    declarations: [
+        AppComponent,
+    ],
+    imports: [
+        PrettyJsonModule,
+    ],
+    providers: [
+            { provide: JsonPipe, useClass: SafeJsonPipe }
+    ],
+    bootstrap: [AppComponent]
+})
+export class AppModule {
+}
 ```
 
 ### Pretty (and safe) Pipe
@@ -62,11 +88,9 @@ bootstrap(ItunesAppComponent, [provide(PLATFORM_PIPES, {
 The `PrettyJsonPipe` stringifies the object and then adds spans around properties, `null`, arrays etc. You can bind it to the innerHtml of other elements.
 
 ```js
-import {PrettyJsonPipe} from 'angular2-prettyjson/prettyjson';
 
 @Component({
   ....
-  pipes [PrettyJsonPipe],
   template: `
     <pre [innerHtml]="circularObj | prettyjson:3"></pre>
   `
@@ -93,8 +117,6 @@ import {PrettyJsonPipe} from 'angular2-prettyjson/prettyjson';
  Takes an input `[obj]` that can be data bound to any object.
 
 ```js
-import {PrettyJsonComponent} from 'angular2-prettyjson/prettyjson';
-
 @Component({
   ....
   template: `
@@ -110,25 +132,6 @@ import {PrettyJsonComponent} from 'angular2-prettyjson/prettyjson';
 outputs
 
 ![Pretty json with syntax highlight](https://cloud.githubusercontent.com/assets/487758/15599410/a68103f4-2415-11e6-8c5e-d86c22abd72b.png)
-
-## Integrate with [Angular-CLI](https://github.com/angular/angular-cli)
-
-1. Install
-1. Add `'angular2-prettyjson/**/*.+(js|js.map)'` to the `vendorNpmFiles` array in `angular-cli-build.js`
-1. In `src/system-config.js`:
-    - Add `'angular2-prettyjson'` to the "third party barrels"
-    - Add `'angular2-prettyjson': 'vendor/angular2-prettyjson'` to the System config: 
-    - ```
-        System.config({
-            map: {
-                '@angular': 'vendor/@angular',
-                'rxjs': 'vendor/rxjs',
-                'angular2-prettyjson': 'vendor/angular2-prettyjson',
-                'main': 'main.js'
-            },
-            packages: cliSystemConfigPackages
-        });
-      ```
 
 ## Changelog
 

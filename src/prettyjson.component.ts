@@ -1,9 +1,7 @@
-import {Component, Input, ViewEncapsulation, OnInit} from "@angular/core";
-import {PrettyJsonPipe} from "./prettyjson.pipe";
+import {Component, Input} from "@angular/core";
 
 @Component({
   selector: "prettyjson",
-  pipes: [PrettyJsonPipe],
   template: `
     <pre [innerHtml]="obj | prettyjson">
     </pre>
