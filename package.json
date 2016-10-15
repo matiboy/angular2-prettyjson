@@ -21,13 +21,11 @@
   "author": "Matiboy <mathieu@redapesolutions.com>",
   "license": "ISC",
   "dependencies": {
-    "@angular/common": "^2.0.0",
-    "@angular/core": "^2.0.0",
-    "rxjs": "^5.0.0-beta.6",
-    "zone.js": "^0.6.6"
+    "@angular/core": "^2.0.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "@angular/common": "^2.0.0",    
     "expect": "^1.20.1",
     "htmltree": "0.0.4",
     "karma": "^0.13.22",
