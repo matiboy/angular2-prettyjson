@@ -1,4 +1,4 @@
-# Angular 2 Pretty Json v2.0.0
+# Angular 2 Pretty Json v2.0.1
 
 A module for Angular 2 debug output of objects. Contains a pipe similar to [JsonPipe](https://angular.io/docs/ts/latest/api/common/index/JsonPipe-class.html) but adds support for spacing and handling of circular structures.  
 Also contains a component that outputs any object with syntax highlight.  
@@ -63,8 +63,7 @@ outputs
 If you want the Safe Pipe to be used throughout the app:
 
 ```js
-import {PrettyJsonModule} from 'angular2-prettyjson';
-import {SafeJsonPipe} from 'angular2-prettyjson/prettyjson';
+import {PrettyJsonModule, SafeJsonPipe} from 'angular2-prettyjson';
 import {JsonPipe} from '@angular/common';
 
 @NgModule({
@@ -117,8 +116,11 @@ The `PrettyJsonPipe` stringifies the object and then adds spans around propertie
  Takes an input `[obj]` that can be data bound to any object.
 
 ```js
+import {PrettyJsonComponent} from 'angular2-prettyjson';
+
 @Component({
   ....
+  entryComponents: [PrettyJsonComponent], // Add to entry components
   template: `
     <prettyjson [obj]="theForm.value"></prettyjson>
   `
@@ -135,6 +137,5 @@ outputs
 
 ## Changelog
 
-1. Changed dependencies to anything _above_ Angular RC1
-1. Fixed styling of PrettyJsonComponent
-1. Added how-to integrate with Angular-CLI
+1. Export module, both pipes and the component at the top level of the module
+1. Update README

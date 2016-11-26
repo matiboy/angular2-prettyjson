@@ -13,7 +13,8 @@
     "src/json.pipe.ts",
     "src/prettyjson.component.ts",
     "src/prettyjson.pipe.ts",
-    "src/safe.util.ts"
+    "src/safe.util.ts",
+    "src/prettyjson.module.ts"
   ],
   "exclude": [
     "node_modules"
