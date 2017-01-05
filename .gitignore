@@ -9,3 +9,8 @@ Thumbs.db
 *.js
 *.map
 *.d.ts
+**/*.ngfactory.ts
+**/*.metadata.json
+**/*.ngsummary.json
+.vscode
+
