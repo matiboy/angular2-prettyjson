@@ -11,3 +11,5 @@ spec
 .npmignore
 .idea
 tmp
+typings
+.vscode
