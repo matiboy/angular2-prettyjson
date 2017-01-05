@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
-    "noImplicitAny": true,
-    "module": "commonjs",
-    "target": "ES5",
+    "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "lib": ["es2015", "dom"],
+    "moduleResolution": "node",
+    "module": "es2015",
+    "noImplicitAny": true,
+    "rootDir": ".",
     "sourceMap": true,
-    "declaration": true
+    "target": "ES5"
   },
   "files": [
     "index.ts",
@@ -21,5 +24,9 @@
   ],
   "atom": {
     "rewriteTsconfig": true
+  },
+  "angularCompilerOptions": {
+    "skipMetadataEmit" : false,
+    "strictMetadataEmit": true
   }
 }
