@@ -1,4 +1,4 @@
-# Angular 2 Pretty Json v2.0.1
+# Angular 2 Pretty Json v2.0.2
 
 A module for Angular 2 debug output of objects. Contains a pipe similar to [JsonPipe](https://angular.io/docs/ts/latest/api/common/index/JsonPipe-class.html) but adds support for spacing and handling of circular structures.  
 Also contains a component that outputs any object with syntax highlight.  
@@ -137,5 +137,5 @@ outputs
 
 ## Changelog
 
-1. Export module, both pipes and the component at the top level of the module
+1. Use angular-compile for build, creates metadata. Fixes issue #8
 1. Update README
