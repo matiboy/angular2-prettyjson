@@ -10,6 +10,27 @@ Also contains a component that outputs any object with syntax highlight.
 npm install angular2-prettyjson
 ```
 
+## ES2015 / UMD
+
+Two versions are available: ES2015 modules and UMD. If you are using a project based on the AngularCLI, everything should work from a simple npm install.  
+If you are using the Angular Quickstart template (or other SystemJS based compilation), please point to the `index.umd.js` file
+e.g. `systemjs.config.js`:
+
+```
+    map: {
+      ...
+      // other libraries
+      'rxjs':                      'npm:rxjs',
+      'angular2-prettyjson': 'npm:angular2-prettyjson'
+    },
+    packages: {
+      ...,
+      'angular2-prettyjson': {
+        defaultExtension: 'js',
+        main: './index.umd.js'
+      }
+```
+
 ## Usage
 
 Import PrettyJsonModule to have access to following component and pipes
@@ -137,5 +158,5 @@ outputs
 
 ## Changelog
 
-1. Use angular-compile for build, creates metadata. Fixes issue #8
+1. Added UMD bundles. Fixes issue #8
 1. Update README
