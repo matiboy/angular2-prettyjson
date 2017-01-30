@@ -128,6 +128,21 @@ The `PrettyJsonPipe` stringifies the object and then adds spans around propertie
     .key { color: red; }
  ```
 
+ If you wish to use the `styles` property of the parent component, please prefix each class selector with `:host /deep/`
+ e.g.
+
+ ```js
+
+@Component({
+  ....
+  template: `
+    <pre [innerHtml]="circularObj | prettyjson:3"></pre>
+  `,
+  styles: [`:host /deep/ .string {color:green} ...`]
+  })
+  ...
+```
+
  See output under component below.
 
 ### Component
