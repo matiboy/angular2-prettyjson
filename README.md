@@ -1,4 +1,4 @@
-# Angular 2 Pretty Json v2.0.2
+# Angular 2 Pretty Json v2.0.4
 
 A module for Angular 2 debug output of objects. Contains a pipe similar to [JsonPipe](https://angular.io/docs/ts/latest/api/common/index/JsonPipe-class.html) but adds support for spacing and handling of circular structures.  
 Also contains a component that outputs any object with syntax highlight.  
@@ -121,6 +121,7 @@ The `PrettyJsonPipe` stringifies the object and then adds spans around propertie
  A good set of styles to use is
 
  ```css
+    pre span {white-space: normal;}
     .string { color: green; }
     .number { color: darkorange; }
     .boolean { color: blue; }
@@ -173,5 +174,5 @@ outputs
 
 ## Changelog
 
-1. Added UMD bundles. Fixes issue #8
+1. Added style to wrap text. Closes #11
 1. Update README
