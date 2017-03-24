@@ -1,6 +1,6 @@
 {
   "name": "angular2-prettyjson",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Angular2 json utils. Includes a pipe to replace Angular's built in json pipe which implements spacing, avoids circular references. Also includes a component that will pretty print json with syntax highlight",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,7 @@
   },
   "keywords": [
     "angular2",
+    "angular4",
     "@angular",
     "json",
     "pipe",
@@ -22,8 +23,7 @@
   "author": "Matiboy <mathieu@redapesolutions.com>",
   "license": "ISC",
   "dependencies": {
-    "@angular/core": "^2.0.0",
-    "rxjs": "^5.0.0-rc.4"
+    "@angular/core": "^2.0.0 || ^4.0.0"
   },
   "devDependencies": {
     "@angular/common": "^2.4.1",
