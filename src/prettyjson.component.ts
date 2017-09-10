@@ -1,7 +1,7 @@
-import {Component, Input} from "@angular/core";
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: "prettyjson",
+  selector: 'prettyjson',
   template: `
     <pre [innerHtml]="obj | prettyjson">
     </pre>
@@ -13,8 +13,8 @@ import {Component, Input} from "@angular/core";
     :host >>> .number { color: darkorange; }
     :host >>> .boolean { color: blue; }
     :host >>> .null { color: magenta; }
-    :host >>> .key { color: red; }`
-  ]
+    :host >>> .key { color: red; }`,
+  ],
 })
 export class PrettyJsonComponent {
   @Input() obj: any;

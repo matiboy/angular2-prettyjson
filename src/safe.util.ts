@@ -5,9 +5,9 @@ export function serializer() {
 
   let cycleReplacer = function(key: string, value: any) {
     if (stack[0] === value) {
-      return "[Circular ~]";
+      return '[Circular ~]';
     }
-    return "[Circular ~." + keys.slice(0, stack.indexOf(value)).join(".") + "]";
+    return '[Circular ~.' + keys.slice(0, stack.indexOf(value)).join('.') + ']';
   };
 
   return function(key: string, value: any) {
@@ -18,8 +18,7 @@ export function serializer() {
       if (~stack.indexOf(value)) {
         value = cycleReplacer.call(this, key, value);
       }
-    }
-    else {
+    } else {
       stack.push(value);
     }
 

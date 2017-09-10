@@ -1,0 +1,33 @@
+{
+  "name": "angular2-prettyjson",
+  "version": "2.0.5",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matiboy/angular2-prettyjson"
+  },
+  "author": {
+    "name": "Matiboy",
+    "email": "mathieu@redapesolutions.com"
+  },
+  "keywords": [
+    "angular2",
+    "angular4",
+    "@angular",
+    "json",
+    "pipe",
+    "pretty"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matiboy/angular2-prettyjson/issues"
+  },
+  "main": "angular2-prettyjson.umd.js",
+  "module": "angular2-prettyjson.js",
+  "jsnext:main": "angular2-prettyjson.js",
+  "typings": "angular2-prettyjson.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
