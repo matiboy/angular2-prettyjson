@@ -35,7 +35,7 @@ gulp.task('copy:source', function () {
 });
 
 /**
- * 3. Inline template (.html) and style (.css) files into the the component .ts files.
+ * 3. Inline template (.html) and style (.css) files into the component .ts files.
  *    We do this on the /.tmp folder to avoid editing the original /src files
  */
 gulp.task('inline-resources', function () {
@@ -131,7 +131,7 @@ gulp.task('rollup:umd', function () {
       // The name to use for the module for UMD/IIFE bundles
       // (required for bundles with exports)
       // See https://github.com/rollup/rollup/wiki/JavaScript-API#modulename
-      moduleName: 'angular2-prettyjson',
+      name: 'angular2-prettyjson',
 
       // See https://github.com/rollup/rollup/wiki/JavaScript-API#globals
       globals: {
