@@ -1,6 +1,6 @@
 import { JsonPipe } from '@angular/common';
 import { expect } from 'chai';
-import { describe, it } from 'mocha';
+import 'mocha';
 
 import { SafeJsonPipe } from './json.pipe';
 

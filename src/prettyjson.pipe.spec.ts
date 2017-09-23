@@ -1,6 +1,6 @@
 import * as htmltree from 'htmltree';
 import { expect } from 'chai';
-import { describe, it } from 'mocha';
+import 'mocha'
 
 import { PrettyJsonPipe } from '../src/prettyjson.pipe';
 
