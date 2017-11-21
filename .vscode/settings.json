@@ -1,0 +1,8 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  // Place your settings in this file to overwrite the default settings
+    "bookmarks.useStickyBookmarks": true,
+    "bookmarks.navigateThroughAllFiles": true,
+    "editor.tabSize": 2,
+    "typescript.tsdk": "/Users/redapesolutions/.nvm/v6.9.1/lib/node_modules/typescript/lib/"
+}
