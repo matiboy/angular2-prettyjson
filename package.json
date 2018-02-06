@@ -1,10 +1,10 @@
 {
-    "name": "angular-library-starter",
-    "version": "0.0.1",
+    "name": "angular2-prettyjson",
+    "version": "2.0.7",
     "description": "Build an Angular library compatible with AoT compilation and Tree shaking",
-    "main": "./bundles/angular-library-starter.umd.js",
-    "module": "./esm5/angular-library-starter.js",
-    "es2015": "./esm2015/angular-library-starter.js",
+    "main": "./bundles/angular2-prettyjson.umd.js",
+    "module": "./esm5/angular2-prettyjson.js",
+    "es2015": "./esm2015/angular2-prettyjson.js",
     "scripts": {
         "build": "node build.js",
         "test": "karma start",
@@ -14,16 +14,16 @@
         "compodoc": "compodoc -p tsconfig.json",
         "compodoc-serve": "compodoc -s"
     },
-    "typings": "./angular-library-starter.d.ts",
+    "typings": "./angular2-prettyjson.d.ts",
     "author": "",
     "repository": {
         "type": "git",
-        "url": "https://github.com/robisim74/angular-library-starter.git"
+        "url": "https://github.com/matiboy/angular2-prettyjson.git"
     },
     "bugs": {
-        "url": "https://github.com/robisim74/angular-library-starter/issues"
+        "url": "https://github.com/matiboy/angular2-prettyjson/issues"
     },
-    "homepage": "https://github.com/robisim74/angular-library-starter",
+    "homepage": "https://github.com/matiboy/angular2-prettyjson",
     "keywords": [
         "angular",
         "javascript",
@@ -34,8 +34,7 @@
         "tslib": "^1.7.1"
     },
     "peerDependencies": {
-        "@angular/common": ">= 5.0.0",
-        "@angular/core": ">= 5.0.0"
+        "@angular/core": ">= 2.0.0"
     },
     "devDependencies": {
         "@angular/animations": "5.0.0",

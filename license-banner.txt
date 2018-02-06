@@ -1,4 +1,4 @@
 /**
- * @license angular-library-starter
+ * @license angular2-prettyjson
  * MIT license
  */

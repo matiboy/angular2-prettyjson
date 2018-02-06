@@ -18,10 +18,7 @@ import sourcemaps from 'rollup-plugin-sourcemaps';
  *      e.g. import { map } from 'rxjs/operators'; => 'rxjs/operators': 'Rx.Observable.prototype'
  */
 const globals = {
-    '@angular/core': 'ng.core',
-    '@angular/common': 'ng.common',
-    'rxjs/Observable': 'Rx',
-    'rxjs/Observer': 'Rx'
+    '@angular/core': 'ng.core'
 };
 
 export default {
@@ -30,7 +27,7 @@ export default {
     onwarn: () => { return },
     output: {
         format: 'umd',
-        name: 'ng.angularLibraryStarter',
+        name: 'ng.angular2Pretyjson',
         globals: globals,
         sourcemap: true,
         exports: 'named'
