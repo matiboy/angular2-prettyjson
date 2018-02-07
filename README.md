@@ -1,8 +1,10 @@
-# Angular 2 Pretty Json v2.0.7
+# Angular 2 Pretty Json v3.0.0
 
 A module for Angular 2 debug output of objects. Contains a pipe similar to [JsonPipe](https://angular.io/docs/ts/latest/api/common/index/JsonPipe-class.html) but adds support for spacing and handling of circular structures.  
 Also contains a component that outputs any object with syntax highlight.  
 **Warning**: just as the `JsonPipe`, this is an impure pipe and should be used only for debugging purposes.
+
+**Breaking change in 3.0.0** The UMD bundle has moved to a "bundle" subdirectory. SymstemJS users should update their system.config. Should not affect AngularCLI and other webpack projects.
 
 ## Install
 
@@ -13,7 +15,7 @@ npm install angular2-prettyjson
 ## ES2015 / UMD
 
 Two versions are available: ES2015 modules and UMD. If you are using a project based on the AngularCLI, everything should work from a simple npm install.  
-If you are using the Angular Quickstart template (or other SystemJS based compilation), please point to the `index.umd.js` file
+If you are using the Angular Quickstart template (or other SystemJS based compilation), please point to the bundle `angular2-prettyjson.umd.min.js` file
 e.g. `systemjs.config.js`:
 
 ```
@@ -27,7 +29,7 @@ e.g. `systemjs.config.js`:
       ...,
       'angular2-prettyjson': {
         defaultExtension: 'js',
-        main: './index.umd.js'
+        main: './bundles/angular2-prettyjson.umd.min.js'
       }
 ```
 
@@ -174,5 +176,6 @@ outputs
 
 ## Changelog
 
-1. Dependencies to include Angular 4 as well as 2
-1. Removed dependency on RxJS
+1. New build system hopefully means that there is no more AoT issue.
+1. Project recoded based on [Angular Library Starter](https://github.com/robisim74/angular-library-starter)
+1. angular core/common are now peerDependencies which should fix the problems when updating Angular
