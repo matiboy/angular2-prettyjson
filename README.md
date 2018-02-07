@@ -173,9 +173,3 @@ import {PrettyJsonComponent} from 'angular2-prettyjson';
 outputs
 
 ![Pretty json with syntax highlight](https://cloud.githubusercontent.com/assets/487758/15599410/a68103f4-2415-11e6-8c5e-d86c22abd72b.png)
-
-## Changelog
-
-1. New build system hopefully means that there is no more AoT issue.
-1. Project recoded based on [Angular Library Starter](https://github.com/robisim74/angular-library-starter)
-1. angular core/common are now peerDependencies which should fix the problems when updating Angular
