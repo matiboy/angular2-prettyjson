@@ -26,11 +26,15 @@
     "homepage": "https://github.com/matiboy/angular2-prettyjson",
     "keywords": [
         "angular",
+        "json",
+        "pretty",
+        "prettyprint",
         "javascript",
         "typescript"
     ],
     "license": "MIT",
     "dependencies": {
+        "htmltree": "0.0.4",
         "tslib": "^1.7.1"
     },
     "peerDependencies": {
