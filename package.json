@@ -34,7 +34,6 @@
     ],
     "license": "MIT",
     "dependencies": {
-        "htmltree": "0.0.4",
         "tslib": "^1.7.1"
     },
     "peerDependencies": {
@@ -55,6 +54,7 @@
         "chalk": "2.3.0",
         "codelyzer": "4.0.0",
         "core-js": "2.5.1",
+        "htmltree": "0.0.4",
         "istanbul-instrumenter-loader": "3.0.0",
         "jasmine-core": "2.8.0",
         "karma": "1.7.1",
