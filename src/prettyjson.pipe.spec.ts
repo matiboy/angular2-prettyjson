@@ -1,10 +1,5 @@
 import "reflect-metadata";
 import {PrettyJsonPipe} from "../src/prettyjson.pipe";
-import chai = require("chai");
-let expect = chai.expect;
-import mocha = require("mocha");
-let describe = mocha.describe;
-let it = mocha.it;
 import htmltree = require("htmltree");
 
 describe("Safety", () => {
@@ -16,10 +11,10 @@ describe("Safety", () => {
     let fn = () => {
       outcome = pipe.transform(o);
     };
-    expect(fn).not.to.throw(TypeError);
+    expect(fn).not.toThrow(TypeError);
     // Should contain the keyword "Circular"
     fn();
-    expect(outcome).to.contain("Circular");
+    expect(outcome).toContain("Circular");
   });
 });
 
@@ -59,10 +54,10 @@ describe("Generated markup", () => {
     // Parse html
     htmltree(outcome, (err: any, htmlDoc: any) => {
       let spans = htmlDoc.root.filter((element: any) => element.type === "tag");
-      [0, 2, 4, 6, 9, 10, 11].forEach((index: number) => expect(spans[index].attributes.class).to.equal("key"));
-      [1, 3, 7].forEach((index: number) => expect(spans[index].attributes.class).to.equal("number"));
-      [5, 8].forEach((index: number) => expect(spans[index].attributes.class).to.equal("string"));
-      expect(spans[12].attributes.class).to.equal("null");
+      [0, 2, 4, 6, 9, 10, 11].forEach((index: number) => expect(spans[index].attributes.class).toEqual("key"));
+      [1, 3, 7].forEach((index: number) => expect(spans[index].attributes.class).toEqual("number"));
+      [5, 8].forEach((index: number) => expect(spans[index].attributes.class).toEqual("string"));
+      expect(spans[12].attributes.class).toEqual("null");
       done();
     });
   });

@@ -1,16 +1,9 @@
-# Node generated files
-node_modules
-npm-debug.log
-# OS generated files
-Thumbs.db
-.idea
-.DS_Store
-# Ignored files
-*.js
-*.map
-*.d.ts
-**/*.ngfactory.ts
-**/*.metadata.json
-**/*.ngsummary.json
-.vscode
+/node_modules
+/dist
+/documentation
+/coverage
 
+*.log
+*.tgz
+.vscode
+.idea

@@ -1,32 +1,25 @@
 {
-  "compilerOptions": {
-    "declaration": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "lib": ["es2015", "dom"],
-    "moduleResolution": "node",
-    "module": "es2015",
-    "noImplicitAny": true,
-    "rootDir": ".",
-    "sourceMap": true,
-    "target": "ES5"
-  },
-  "files": [
-    "index.ts",
-    "src/json.pipe.ts",
-    "src/prettyjson.component.ts",
-    "src/prettyjson.pipe.ts",
-    "src/safe.util.ts",
-    "src/prettyjson.module.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ],
-  "atom": {
-    "rewriteTsconfig": true
-  },
-  "angularCompilerOptions": {
-    "skipMetadataEmit" : false,
-    "strictMetadataEmit": true
-  }
+    "compilerOptions": {
+        "baseUrl": ".",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "strict": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "rootDir": ".",
+        "sourceMap": true,
+        "inlineSources": true,
+        "target": "es5",
+        "skipLibCheck": true,
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "typeRoots": [
+            "./node_modules/@types/"
+        ]
+    },
+    "exclude": [
+        "node_modules"
+    ]
 }

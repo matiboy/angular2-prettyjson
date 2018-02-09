@@ -1,11 +1,7 @@
+
 import "reflect-metadata";
 import {SafeJsonPipe} from "../src/json.pipe";
 import {JsonPipe} from "@angular/common";
-import chai = require("chai");
-let expect = chai.expect;
-import mocha = require("mocha");
-let describe = mocha.describe;
-let it = mocha.it;
 
 describe("Safety", () => {
   it("should throw when using normal Json pipe for circular structures", () => {
@@ -15,7 +11,7 @@ describe("Safety", () => {
     let fn = () => {
       pipe.transform(o);
     };
-    expect(fn).to.throw(TypeError);
+    expect(fn).toThrow(new TypeError('Converting circular structure to JSON'));
   });
   it("should not throw when using safe json pipe on circular structure", () => {
     let o: any = {};
@@ -25,9 +21,9 @@ describe("Safety", () => {
     let fn = () => {
       outcome = pipe.transform(o);
     };
-    expect(fn).not.to.throw(TypeError);
+    expect(fn).not.toThrow(TypeError);
     // Should contain the keyword "Circular"
     fn();
-    expect(outcome).to.contain("Circular");
+    expect(outcome).toContain("Circular");
   });
 });

@@ -1,0 +1,4 @@
+/**
+ * @license angular2-prettyjson
+ * MIT license
+ */
