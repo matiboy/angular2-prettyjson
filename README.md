@@ -35,7 +35,7 @@ e.g. `systemjs.config.js`:
 
 ## Usage
 
-Import PrettyJsonModule to have access to following component and pipes
+Import PrettyJsonModule to have access to the component and pipes
 ```js
 import {PrettyJsonModule} from 'angular2-prettyjson';
 
@@ -80,30 +80,6 @@ outputs
 4 spaces:
 
 ![4 spaces](https://cloud.githubusercontent.com/assets/487758/15599411/a6815a8e-2415-11e6-8f1f-e68db77885a2.png)
-
-#### Overriding JsonPipe throughout the app
-
-If you want the Safe Pipe to be used throughout the app:
-
-```js
-import {PrettyJsonModule, SafeJsonPipe} from 'angular2-prettyjson';
-import {JsonPipe} from '@angular/common';
-
-@NgModule({
-    declarations: [
-        AppComponent,
-    ],
-    imports: [
-        PrettyJsonModule,
-    ],
-    providers: [
-            { provide: JsonPipe, useClass: SafeJsonPipe }
-    ],
-    bootstrap: [AppComponent]
-})
-export class AppModule {
-}
-```
 
 ### Pretty (and safe) Pipe
 
@@ -154,12 +130,12 @@ The `PrettyJsonPipe` stringifies the object and then adds spans around propertie
 
  Takes an input `[obj]` that can be data bound to any object.
 
+ Make sure `PrettyJsonModule` is imported in your own module.
+
 ```js
-import {PrettyJsonComponent} from 'angular2-prettyjson';
 
 @Component({
   ....
-  entryComponents: [PrettyJsonComponent], // Add to entry components
   template: `
     <prettyjson [obj]="theForm.value"></prettyjson>
   `
